@@ -1,0 +1,120 @@
+.dark, input.dark, nav.row a.dark {
+  color: $gray;
+  border-color: $gray;
+  &:hover {
+    border-color: $lighter-gray;
+  }
+  &:active {
+    color: $lighter-gray;
+  }
+
+}
+
+nav.row.dark {
+  border-color: $gray;
+}
+
+nav.row a.dark {
+  background-color: transparent;
+
+  &:before, &:after {
+    border-color: $gray;
+  }
+
+  &:hover, &:focus {
+    color: $lighter-gray;
+  }
+}
+
+nav.row.tabs a.dark {
+  &:hover {
+    background-color: $dark-gray;
+    border-color: $gray;
+  }
+
+  &:focus {
+    border-bottom: 1px solid transparent;
+    color: $lighter-gray;
+  }
+}
+
+h1.dark, h2.dark, h3.dark, h4.dark, h5.dark, h6.dark, p.dark, span.dark {
+  color: $lighter-gray;
+}
+
+input[type="text"].dark {
+  z-index: 2;
+  color: $lighter-gray;
+  &:focus {
+    border-color: $lighter-gray;
+  }
+}
+
+label.dark {
+  &:before {
+    color: $gray;
+    z-index: 1;
+  }
+}
+
+button.dark {
+  &:before, &:after {
+    color: $gray;
+  }
+
+  &:hover {
+    &:before, &:after {
+      color: $lighter-gray;
+    }
+  }
+}
+
+.box-button.dark {
+  &:before, &:after {
+    background-color: $lighter-gray;
+  }
+
+  &:hover {
+    color: $lighter-gray;
+  }
+
+  &:active {
+    background-color: $dark-gray;
+  }
+}
+
+button.lg {
+  font-size: 16px;
+  padding: 16px 32px;
+  border-width: 4px;
+}
+
+button.sm {
+  font-size: 8px;
+  padding: 8px 16px;
+  border-width: 2px;
+}
+
+h1.sm, h2.sm, h3.sm, h4.sm, h5.sm, h6.sm {
+  color: $light-gray;
+}
+
+h1.sm {
+  font-size: 48px;
+}
+
+h2.sm {
+  font-size: 32px;
+}
+
+h3.sm {
+  font-size: 24px;
+}
+
+h4.sm, h5.sm {
+  font-size: 12px;
+}
+
+h6.sm {
+  font-size: 8px;
+}

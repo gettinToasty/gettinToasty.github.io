@@ -1,0 +1,57 @@
+a {
+  text-decoration: none;
+  position: relative;
+  color: #0000EE;
+
+  &:before, &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 0;
+    background-color: #0000EE;
+    top: 18px;
+    transition: 0.2s all;
+
+  }
+
+  &:visited {
+    color: #551A8B;
+
+    &:before, &:after {
+      background-color: #551A8B;
+    }
+  }
+
+  &:before {
+    left: 50%;
+  }
+
+  &:after {
+    right: 50%;
+  }
+
+  &:hover {
+
+    &:before, &:after {
+      width: 50%;
+    }
+  }
+}
+
+.monochrome {
+  @extend a;
+  color: $light-gray;
+
+  &:before, &:after {
+    background-color: $light-gray;
+  }
+
+  &:visited {
+    color: $gray;
+
+    &:before, &:after {
+      background-color: $gray;
+    }
+  }
+}
