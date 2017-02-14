@@ -3,9 +3,406 @@
   <head>
     <meta charset="utf-8">
     <title>Gettin Toasty</title>
-    
+    <link rel="stylesheet" href="./stylesheets/demo_master.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="./scripts/script.js"></script>
+    <script type="text/javascript" src="./scripts/stickem.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        var windowsize = $(window).width();
+        if (windowsize <= 990) {
+          $('.container').stickem().destroy();
+        } else {
+          $('.container').stickem();
+        }
+
+        $(window).resize(function() {
+          if (windowsize <= 990) {
+            $('.container').stickem().destroy();
+          } else {
+            $('.container').stickem();
+          }
+        });
+      });
+    </script>
+
   </head>
   <body>
+    <header>
+      <h1>Gettin Toasty</h1>
+      <div class="icons">
+        <a href="https://github.com/gettinToasty">
+          <i class="fa fa-github fa-4x" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/sean-beyer-824768112">
+          <i class="fa fa-linkedin-square fa-4x" aria-hidden="true"></i>
+        </a>
+      </div>
+    </header>
+    <div id="sticky-anchor"></div>
+    <nav class="row fixed" id="sticky">
+      <div class="col-1-4">
+        <a href="#grid">The Grid</a>
+      </div>
+
+      <div class="col-1-4">
+        <a href="#components">Components</a>
+      </div>
+
+      <div class="col-1-4">
+        <a href="#typography">Typography</a>
+      </div>
+
+      <div class="col-1-4">
+        <a href="#customization">Customization</a>
+      </div>
+    </nav>
+    <div class="container">
+
+      <div class="body row right stickem-container">
+
+        <section class="col-1-2 stickem" id="grid">
+          <div>
+            <h2>The Grid</h2>
+            <p>
+              The grid is a system designed on CSS3's flexbox framework to make layouts effortless and easy.
+            </p>
+          </div>
+        </section>
+
+        <section class="grid-content col-1-2" id="grid-content">
+          <h3>Sample Grid</h3>
+
+          <div class="grid-demo">
+            <div class="row">
+              <div class="col-1-1">
+                col-1-1
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-1-2">
+                col-1-2
+              </div>
+              <div class="col-1-2">
+                col-1-2
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-1-8">
+                col-1-8
+              </div>
+              <div class="col-1-8">
+                col-1-8
+              </div>
+              <div class="col-3-4">
+                col-3-4
+              </div>
+            </div>
+          </div>
+
+          <p>
+            The Grid uses responsive design principles and mathematical proportions to ensure a nice looking layout no matter your screen size. Each Grid is composed of two primary elements: rows and columns. Rows function as containing elements in which columns are inserted.
+          </p>
+
+          <p>
+            The Grid can be implemented using dividers such as div's with appropriate class names, as shown below:
+          </p>
+
+          <pre class="snippet">
+    &lt;div class='row'&gt;
+      &lt;div class='col-1-2'&gt;
+        Content goes here
+      &lt;/div&gt;
+      &lt;div class='col-1-2'&gt;
+        More content goes here
+      &lt;/div&gt;
+    &lt;/div&gt;</pre>
+
+          <p>
+            The above code would look a little something like this:
+          </p>
+
+          <div class="grid-demo row">
+            <div class="col-1-2">
+              Content goes here
+            </div>
+            <div class="col-1-2">
+              More content goes here
+            </div>
+          </div>
+
+          <p>
+            Numbers in the col elements' class names represent the proportion of space they take up. The Grid supports proportions on a 1/8 scale of granularity, meaning you can have 1/8 elements, 1/4 elements, 1/2 elements, and increments of those numbers. A col with 1-1 will take up 100% of the row.
+          </p>
+
+        </section>
+      </div>
+
+      <div class="body row left stickem-container">
+
+        <section class="components-content col-1-2" id="components-content">
+          <h3>
+            User Input
+          </h3>
+
+          <h5>
+            Text Inputs
+          </h5>
+          <label for="Username">
+            <input type="text" name="Username" value="">
+          </label>
+          <label for="Password">
+            <input type="password" name="Password" value="">
+          </label>
+          <textarea name="Message Body"></textarea>
+
+          <h5>
+            Standalone Buttons
+          </h5>
+          <button>Default Button</button>
+          <button class="box-button" type="button">Box Button</button>
+          <button class="brace-button" type="button">Brace Button</button>
+
+          <h3>
+            Navgation
+          </h3>
+
+          <h5>
+            Default Style
+          </h5>
+          <nav class='row fixed'>
+            <div class='col-1-4'>
+              <a class="static-link" href="#">Home</a>
+            </div>
+            <div class='col-1-4'>
+              <a class="static-link" href="#">Products</a>
+            </div>
+            <div class='col-1-4'>
+              <a class="static-link" href="#">News</a>
+            </div>
+            <div class='col-1-4'>
+              <button type="button">Sign Up</button>
+            </div>
+          </nav>
+          <p>
+            To give your site the Toasty Nav treatment, simply give your &lt;nav&gt; element the class of 'row,' and add columns with your links and buttons! No additional styling required.
+          </p>
+          <h5>
+            Tabbed Style
+          </h5>
+          <nav class='row tabs fixed'>
+            <div class='col-1-4'>
+              <a class="static-link" href="#">Home</a>
+            </div>
+            <div class='col-1-4'>
+              <a class="static-link" href="#">Products</a>
+            </div>
+            <div class='col-1-4'>
+              <a class="static-link" href="#">News</a>
+            </div>
+            <div class='col-1-4'>
+              <button type="button">Sign Up</button>
+            </div>
+          </nav>
+
+          <h5>Links</h5>
+          <p>Links have recieved a bit of an upgrade to a more modern look with Toasty CSS, in both <a class="static-link" href="www.google.com">default colors</a> (<a class="static-link" href="#">visited</a>) and with the modifier of the <a class="static-link monochrome" href="www.google.com">"monochrome" class</a> (<a class="static-link monochrome" href="#">visited</a>).</p>
+
+          <h5>Dropdowns</h5>
+          <nav class="row">
+            <div class="col-1-4">
+              <div class="hamburger left">
+                <ul>
+                  <li>Option One</li>
+                  <li>Option Two</li>
+                  <li>Option Three</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-1-4">
+              <div class="dropdown" name="Choose One">
+                <ul>
+                  <li>Option One</li>
+                  <li>Option Two</li>
+                  <li>Option Three</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-1-4">
+              <div class="settings">
+                <ul>
+                  <li>Option One</li>
+                  <li>Option Two</li>
+                  <li>Option Three</li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+
+          <p>
+            Toasty CSS has a few dropdown components built in as well, here is the HTML structure to use them:
+          </p>
+          <pre class="snippet">
+    &lt;div class='hamburger'&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Option One&lt;/li&gt;
+        &lt;li&gt;Option Two&lt;/li&gt;
+        &lt;li&gt;Option Three&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;</pre>
+
+        </section>
+
+        <section class="col-1-2 stickem" id="components">
+          <div>
+            <h2>Components</h2>
+            <p>
+              The fun stuff! These prebuilt components are totally modular and built purely in CSS.
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <div class="body row right stickem-container">
+
+        <section class="col-1-2 stickem" id="typography">
+          <div>
+            <h2>Typography</h2>
+            <p>
+              Font choice is important in any website, here is what you have access to when you use Toasty CSS.
+            </p>
+          </div>
+        </section>
+
+        <section class="typography-content col-1-2" id="typography-content">
+          <h3>Defaults</h3>
+          <p>
+            Out of the box Toasty CSS provides a sans-serif look using Open Sans, designed by Steve Matteson. It's a highly-readable font at every weight for print, web, and mobile. Toasty CSS also makes some typographical decisions for you by replacing the formatting of every text tag you'll need to create a clean, consistent look. Body text defaults to 16 pixels for maximum readability on a variety of screen sizes with a line-height of 24 pixels. This default value is applied to the body and all p tags, which have an additional bottom and left margin of 16 pixels.
+          </p>
+
+          <h3>Serif</h3>
+          <p class='serif'>
+            Maybe your site wants to use a serif, or mixed sans/serif look, which is no problem for Toasty CSS. Just add the 'serif' class to any element to change it's font-family to Cormorant Garamond, the serif font of choice for Toasty CSS, designed by Christian Thalmann. Cormorant Garamond is a serif font heavily inspired by Garamond's amazing legacy, and pairs perfectly with Open Sans.
+          </p>
+
+          <h3>Monospace</h3>
+          <p class='monospace'>
+            Toasty CSS also has a fitting monospace font for your use in Anonymous Pro, designed by Mark Simonson. The &lt;pre&gt; and &lt;code&gt; tags default to this font in Toasty CSS, but it can also be added to any element with the 'monospace' class.
+          </p>
+
+          <h3>Heirarchy</h3>
+          <p>Toasty CSS' text heirarchy and formatting are as follows, with their respective names and tag names:</p>
+          <div class='heirarchy'>
+            <h1>h1: Heading</h1>
+            <h2>h2: Heading</h2>
+            <h3>h3: Heading</h3>
+            <h4>h4: Heading</h4>
+            <h5>h5: Heading</h5>
+            <h6>h6: Heading</h6>
+            <p>p: Body text</p>
+            <span>span: Body text</span>
+          </div>
+
+          <h3>Iconography</h3>
+          <p>Toasty CSS supports FontAwesome's great library of icons out of the box. For more info on how it's used, check out <a href="https://www.fontawesome.io">fontawesome.io</a>, but here are some examples of what you can do:</p>
+          <nav class="row fixed">
+            <div class="col-1-4">
+              <h5 class="sm">Layered Icons!</h5>
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-camera fa-stack-1x"></i>
+                <i class="fa fa-ban fa-stack-2x text-danger" style="color: red;"></i>
+              </span>
+            </div>
+            <div class="col-1-4">
+              <h5 class="sm">Animations!</h5>
+              <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+            </div>
+            <div class="col-1-4">
+              <h5 class="sm">Hover me!</h5>
+              <i class="fa fa-cog fa-3x spin" aria-hidden="true"></i>
+            </div>
+            <div class="col-1-4">
+              <h5 class="sm">And more!</h5>
+              <i class="fa fa-plus-square fa-2x hover" aria-hidden="true"></i>
+            </div>
+          </nav>
+
+        </section>
+      </div>
+
+      <div class="body row left stickem-container">
+        <section class="customization-content col-1-2" id="customization-content">
+          <h3>Modifier Classes</h3>
+          <p>
+            Toasty CSS offers a few modifier classes you can use in combination with the default classes to customize your experience even more. The most common example of these is the "dark" class, which updates the colors to work better on a dark-colored background like black and is works for most elements.
+          </p>
+          <div class="black">
+            <h5 class="dark">Dark Navigation</h5>
+            <nav class="row tabs dark fixed">
+              <div class="col-1-2">
+                <a class="static-link dark" href="#">Home</a>
+              </div>
+              <div class="col-1-2">
+                <button type="button" name="button" class="dark">Dark Button</button>
+              </div>
+            </nav>
+            <nav class="row dark fixed">
+              <div class="col-1-2">
+                <a class="static-link dark" href="#">Home</a>
+              </div>
+              <div class="col-1-2">
+                <button type="button" name="button" class="dark">Dark Button</button>
+              </div>
+            </nav>
+            <h5 class="dark">Dark Forms</h5>
+            <label for="Username" class="dark">
+              <input type="text" class="dark">
+            </label>
+            <button class="brace-button dark">Submit</button>
+            <button class="box-button dark">Reset</button>
+          </div>
+
+          <p>
+            Buttons have a "lg" or "sm" class you can apply to them depending on your size needs. Additionally, links can be styled to appear as buttons with the "link-button" class:
+          </p>
+          <button class="lg">Large Button</button>
+          <button class="sm">Small Button</button>
+          <a class="static-link link-button" href="#">&lt;a&gt; tag</a>
+
+          <p>
+            Headings also have an "sm" class for a slight variant on the bold themes, useful for subheadings:
+          </p>
+          <nav class="row fixed">
+            <div class="col-1-4">
+              <h2>h2</h2>
+            </div>
+            <div class="col-1-4">
+              <h2 class="sm">h2.sm</h2>
+            </div>
+            <div class="col-1-4">
+              <h3>h3</h3>
+            </div>
+            <div class="col-1-4">
+              <h3 class="sm">h3.sm</h3>
+            </div>
+          </nav>
+        </section>
+
+        <section class="col-1-2 stickem" id="customization">
+          <div>
+            <h2>Customization</h2>
+            <p>
+              No two websites are the same, and with Toasty CSS we believe users should be able to tailor their styling to their site's needs.
+            </p>
+          </div>
+        </section>
+      </div>
+
+    </div>
 
   </body>
 </html>
