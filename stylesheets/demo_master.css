@@ -2897,6 +2897,11 @@ h6.sm {
   .icons a:hover:before, .icons .monochrome:hover:before, .icons a:hover:after, .icons .monochrome:hover:after {
     display: none; }
 
+#menu {
+  height: auto;
+  position: fixed;
+  z-index: 1; }
+
 #landing {
   height: 100vh;
   width: 100vw;
