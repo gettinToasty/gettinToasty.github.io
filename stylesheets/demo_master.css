@@ -2899,7 +2899,9 @@ h6.sm {
     display: none; }
 
 #menu {
+  box-sizing: border-box;
   height: auto;
+  padding-bottom: 7px;
   position: fixed;
   z-index: 1;
   background-color: #AD5EB8; }
@@ -2939,26 +2941,23 @@ h6.sm {
       width: 16px;
       height: 16px;
       background-color: #AD5EB8;
-      bottom: -8px;
+      bottom: -15px;
       left: 50%;
       transform: rotate(45deg); }
 
-#landing0 {
+#landing0, #slackr0, #toastycss0, #about0, #contact0 {
   height: 100vh;
   width: 100vw;
-  background-color: #AD5EB8;
   position: relative; }
+
+#landing0 {
+  background-color: #AD5EB8; }
   #landing0 svg {
     position: absolute;
     fill: white;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%); }
-
-#slackr0, #toastycss0, #about0, #contact0 {
-  height: 100vh;
-  width: 100vw;
-  position: relative; }
 
 @keyframes arrow_nudge {
   from {
@@ -2980,66 +2979,19 @@ h6.sm {
   transition: all 0.6s;
   animation: 0.6s ease-in-out 0s infinite alternate arrow_nudge; }
 
-.grid-content, .components-content, .typography-content, .customization-content {
-  box-sizing: border-box;
-  height: auto;
-  flex-grow: 0;
-  flex-shrink: 1; }
-
-#grid, #components, #typography, #customization {
-  box-sizing: border-box;
-  background-color: #666;
-  color: white;
-  height: 100vh;
-  width: 50%; }
-  #grid div, #components div, #typography div, #customization div {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
-
-#components {
-  background-color: #46AB8F; }
-
-#grid {
-  background-color: #AD5EB8; }
-
-#typography {
-  background-color: #DEB385; }
-
-#customization {
-  background-color: black; }
-
 section {
-  position: relative; }
-
-.container {
-  position: relative; }
-
-.stickem-container {
-  position: relative; }
-
-.stickit {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 50%; }
-
-.stickit-end {
-  bottom: 0;
-  position: absolute;
-  left: 0;
-  width: 50%; }
-
-.right {
-  justify-content: flex-end; }
-
-.left {
-  justify-content: flex-start; }
-  .left .stickit {
-    left: 50%; }
-  .left .stickit-end {
-    left: 50%; }
+  position: relative;
+  padding-top: 72px;
+  padding-left: 64px;
+  padding-right: 64px; }
+  section div.row {
+    height: auto;
+    justify-content: center; }
+    section div.row h2 {
+      padding: 0;
+      margin: 0;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600; }
 
 #sticky.stick {
   margin-top: 0 !important;
