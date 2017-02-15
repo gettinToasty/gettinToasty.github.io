@@ -22,6 +22,55 @@
   }
 }
 
+#landing {
+  height: 100vh;
+  width: 100vw;
+  background-color: $main-purple;
+  position: relative;
+
+  svg {
+    position: absolute;
+    fill: white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+#projects {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+@keyframes arrow_nudge {
+  from { bottom: 16px; }
+  to { bottom: 20px; }
+}
+
+.arrow {
+  position: absolute;
+  box-sizing: border-box;
+  border-bottom: 15px solid white;
+  border-right: 15px solid white;
+  width: 35px;
+  height: 35px;
+  transform: translate(-50%, 0);
+  transform: rotate(45deg);
+  bottom: 15px;
+  left: 50%;
+  opacity: 0.3;
+  transition: all 0.6s;
+  animation: 0.6s ease-in-out 0s infinite alternate arrow_nudge;
+
+  &:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+}
+
+
+
 .grid-content, .components-content, .typography-content, .customization-content {
   box-sizing: border-box;
   height: auto;
