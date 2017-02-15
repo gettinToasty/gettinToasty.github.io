@@ -2890,10 +2890,10 @@ h6.sm {
   justify-content: center; }
   .icons i {
     margin: 16px;
-    color: #999;
+    color: rgba(0, 0, 0, 0.3);
     transition: 0.2s all; }
     .icons i:hover {
-      color: #333;
+      color: black;
       cursor: pointer; }
   .icons a:hover:before, .icons .monochrome:hover:before, .icons a:hover:after, .icons .monochrome:hover:after {
     display: none; }
@@ -2903,7 +2903,7 @@ h6.sm {
   height: auto;
   padding-bottom: 7px;
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   background-color: #AD5EB8; }
   #menu li {
     font-family: "Montserrat", sans-serif;
@@ -2983,7 +2983,19 @@ section {
   position: relative;
   padding-top: 72px;
   padding-left: 64px;
-  padding-right: 64px; }
+  padding-right: 64px;
+  overflow: hidden;
+  background-color: white;
+  z-index: -2; }
+  section img {
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    left: 0;
+    top: 54px;
+    filter: blur(4px);
+    opacity: 0.3; }
   section div.row {
     height: auto;
     justify-content: center; }
@@ -2992,6 +3004,13 @@ section {
       margin: 0;
       font-family: "Montserrat", sans-serif;
       font-weight: 600; }
+
+.content {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 64px;
+  border-radius: 32px;
+  position: relative;
+  top: 10%; }
 
 #sticky.stick {
   margin-top: 0 !important;

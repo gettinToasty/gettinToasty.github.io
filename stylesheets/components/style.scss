@@ -7,11 +7,11 @@ $title: 'Montserrat', sans-serif;
 
   i {
     margin: 16px;
-    color: $light-gray;
+    color: rgba(0,0,0,0.3);
     transition: 0.2s all;
 
     &:hover {
-      color: $dark-gray;
+      color: rgba(0,0,0,1);
       cursor: pointer;
     }
   }
@@ -30,7 +30,7 @@ $title: 'Montserrat', sans-serif;
   height: auto;
   padding-bottom: 7px;
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   background-color: $main-purple;
 
   li {
@@ -135,6 +135,20 @@ section {
   padding-top: 72px;
   padding-left: 64px;
   padding-right: 64px;
+  overflow: hidden;
+  background-color: white;
+  z-index: -2;
+
+  img {
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    left: 0;
+    top: 54px;
+    filter: blur(4px);
+    opacity: 0.3;
+  }
 
   div.row {
     height: auto;
@@ -147,6 +161,14 @@ section {
       font-weight: 600;
     }
   }
+}
+
+.content {
+  background-color: rgba(255,255,255,0.7);
+  padding: 64px;
+  border-radius: 32px;
+  position: relative;
+  top: 10%;
 }
 
 #sticky.stick {
