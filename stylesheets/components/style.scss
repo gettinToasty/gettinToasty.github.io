@@ -40,6 +40,8 @@ $title: 'Montserrat', sans-serif;
 
     a {
       color: rgba(255,255,255,0.3);
+      transition: all 0.2s;
+      
       &:hover {
         cursor: pointer;
         color: white;
