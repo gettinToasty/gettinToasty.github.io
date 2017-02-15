@@ -2890,10 +2890,10 @@ h6.sm {
   justify-content: center; }
   .icons i {
     margin: 16px;
-    color: rgba(0, 0, 0, 0.3);
+    color: rgba(173, 94, 184, 0.3);
     transition: 0.2s all; }
     .icons i:hover {
-      color: black;
+      color: #ad5eb8;
       cursor: pointer; }
   .icons a:hover:before, .icons .monochrome:hover:before, .icons a:hover:after, .icons .monochrome:hover:after {
     display: none; }
@@ -2904,7 +2904,7 @@ h6.sm {
   padding-bottom: 7px;
   position: fixed;
   z-index: 100;
-  background-color: #AD5EB8; }
+  background-color: #ad5eb8; }
   #menu li {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
@@ -2925,7 +2925,7 @@ h6.sm {
       display: block;
       width: 4px;
       height: 4px;
-      background-color: #AD5EB8;
+      background-color: #ad5eb8;
       bottom: 1px;
       left: 50%;
       transform: rotate(45deg);
@@ -2940,7 +2940,7 @@ h6.sm {
       display: block;
       width: 16px;
       height: 16px;
-      background-color: #AD5EB8;
+      background-color: #ad5eb8;
       bottom: -15px;
       left: 50%;
       transform: rotate(45deg); }
@@ -2951,7 +2951,7 @@ h6.sm {
   position: relative; }
 
 #landing0 {
-  background-color: #AD5EB8; }
+  background-color: #ad5eb8; }
   #landing0 svg {
     position: absolute;
     fill: white;
@@ -3003,14 +3003,16 @@ section {
       padding: 0;
       margin: 0;
       font-family: "Montserrat", sans-serif;
-      font-weight: 600; }
+      font-weight: 600;
+      color: #ad5eb8; }
 
 .content {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 64px;
   border-radius: 32px;
   position: relative;
-  top: 10%; }
+  top: 10%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); }
 
 #sticky.stick {
   margin-top: 0 !important;

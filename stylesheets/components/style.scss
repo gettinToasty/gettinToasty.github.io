@@ -7,11 +7,11 @@ $title: 'Montserrat', sans-serif;
 
   i {
     margin: 16px;
-    color: rgba(0,0,0,0.3);
+    color: rgba(173, 94, 184, 0.3);
     transition: 0.2s all;
 
     &:hover {
-      color: rgba(0,0,0,1);
+      color: $main-purple;
       cursor: pointer;
     }
   }
@@ -159,16 +159,18 @@ section {
       margin: 0;
       font-family: $title;
       font-weight: 600;
+      color: $main-purple;
     }
   }
 }
 
 .content {
-  background-color: rgba(255,255,255,0.7);
+  background-color: rgba(255,255,255,0.9);
   padding: 64px;
   border-radius: 32px;
   position: relative;
   top: 10%;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.3);
 }
 
 #sticky.stick {
