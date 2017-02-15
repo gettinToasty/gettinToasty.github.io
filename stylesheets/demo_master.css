@@ -2990,10 +2990,10 @@ section {
   section img {
     position: absolute;
     z-index: -1;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    width: auto;
     left: 0;
-    top: 54px;
+    top: 0;
     filter: blur(4px);
     opacity: 0.3; }
   section div.row {
@@ -3005,6 +3005,16 @@ section {
       font-family: "Montserrat", sans-serif;
       font-weight: 600;
       color: #ad5eb8; }
+
+#about0 .photo {
+  width: 240px;
+  height: 240px;
+  border-radius: 100%;
+  background-image: url(../docs/me.jpg);
+  top: 50%;
+  left: 50%;
+  background-size: cover;
+  background-position: center; }
 
 .content {
   background-color: rgba(255, 255, 255, 0.9);
