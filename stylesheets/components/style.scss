@@ -180,6 +180,10 @@ section {
   .row {
     align-items: center;
   }
+
+  ul {
+    margin-left: 16px;
+  }
 }
 
 .master {
@@ -230,6 +234,15 @@ section {
 
   &:before {
     width: 50%;
+  }
+}
+
+#contact0 {
+  svg {
+    position: relative;
+    fill: $main-purple;
+    left: 50%;
+    transform: translate(-50%, 0);
   }
 }
 
