@@ -2990,7 +2990,7 @@ section {
   section img {
     position: absolute;
     z-index: -1;
-    min-height: 100vh;
+    min-height: 100%;
     width: auto;
     left: 0;
     top: 0;
