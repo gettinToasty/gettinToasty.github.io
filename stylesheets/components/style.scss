@@ -91,9 +91,10 @@ $title: 'Montserrat', sans-serif;
 }
 
 #landing0, #slackr0, #toastycss0, #about0, #contact0 {
-  height: 100vh;
+  height: calc(100vh + 72px);
   width: 100vw;
   position: relative;
+  top: -72px;
 }
 
 #landing0 {
