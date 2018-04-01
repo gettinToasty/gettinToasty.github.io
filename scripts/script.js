@@ -1,6 +1,7 @@
 function stickyRelocate() {
     var windowTop = $(window).scrollTop();
     var divTop = $('#sticky-anchor').offset().top;
+    console.log('firing stickyRelocate')
     if (windowTop > divTop) {
         $('#sticky').addClass('stick');
         $('#sticky-anchor').height($('#sticky').outerHeight());

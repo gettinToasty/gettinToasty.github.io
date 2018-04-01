@@ -20,7 +20,17 @@
           navigationPosition: 'top',
           navigationTooltips: ['landing', 'slackr', 'toastycss', 'about', 'contact'],
           showActiveTooltip: true,
-          slidesNavigation: false
+          slidesNavigation: false,
+          onLeave: function(index, nextIndex, direction) {
+            console.log('firing applyShadowToMenu', nextIndex, direction);
+            var landing = $('#landing0');
+            var menu = $('#menu');
+            if (nextIndex === 1 && direction === 'up') {
+                menu.removeClass('has-shadow');
+            } else if(!menu.hasClass('has-shadow')) {
+                menu.toggleClass('has-shadow');
+            }
+          }
         });
       });
     </script>
@@ -85,7 +95,151 @@
       </section>
 
       <section id="about0" class="section" data-anchor="about">
-        <div class="row">
+        <img class="cs-background" src="./docs/dungeon.jpg" alt="">
+        <div class="cs-container">
+          <div class="row fixed">
+            <div class="cs-logo fixed">
+              <h2 class="cs-logo-text">
+                <span class="cs-deadlines">Deadlines</span>
+                <span class="cs-and">&amp;</span>
+                <span class="cs-developers">Developers</span>
+              </h2>
+            </div>
+            <div class="cs-profile-container row">
+              <div class="cs-portrait"></div>
+              <div class="cs-background-info-container">
+                <h6>name</h6><span>Sean</span>
+                <h6>race</h6><span>Human</span>
+                <h6>background</h6>
+                <span
+                  class="cs-background-info"
+                  data-background="Sean is a full stack software engineer based in the Bay Area. Before that, he was a designer, model, actor, and teacher based (mostly) in Seoul, South Korea. When he's not revolutionizing the tech industry, he's usually found playing games or streaming as a Twitch Affiliate. His other interests include listening to and writing Korean hip hop, dancing, and playing board games with far too many pieces."
+                >Entertainer</span>
+              </div>
+              <div class="cs-class-list">
+                <h6>class &amp; level</h6>
+                <ul>
+                  <li>Lv. 8 Dancer</li>
+                  <li>Lv. 3 Teacher</li>
+                  <li>Lv. 1 Model</li>
+                  <li>Lv. 1 Graphic Designer</li>
+                  <li>Lv. 2 Software Engineer</li>
+                  <li>Lv. 1 Twitch Streamer</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row fixed">
+            <div class="cs-attributes-container">
+              <div class="row">
+                <div class="cs-attribute-cell">
+                  <h6>str</h6>
+                  <h2>9</h2>
+                </div>
+                <div class="cs-attribute-cell">
+                  <h6>dex</h6>
+                  <h2>12</h2>
+                </div>
+              </div>
+              <div class="row">
+                <div class="cs-attribute-cell">
+                  <h6>con</h6>
+                  <h2>12</h2>
+                </div>
+                <div class="cs-attribute-cell">
+                  <h6>int</h6>
+                  <h2>13</h2>
+                </div>
+              </div>
+              <div class="row">
+                <div class="cs-attribute-cell">
+                  <h6>wis</h6>
+                  <h2>15</h2>
+                </div>
+                <div class="cs-attribute-cell">
+                  <h6>cha</h6>
+                  <h2>14</h2>
+                </div>
+              </div>
+            </div>
+            <div class="cs-skills-container">
+              <h6>skills</h6>
+              <ul class="cs-skills">
+                <li>
+                  <span class="cs-skill-title">Acrobatics</span>
+                  <span class="cs-skill">+1</span>
+                </li>
+                <li>
+                  <span class="cs-skill-title">Animal Handling</span>
+                  <span class="cs-skill">-1</span>
+                </li>
+                <li>
+                  <span class="cs-skill-title">Backend</span>
+                  <span class="cs-skill">+2</span>
+                </li>
+                <li>
+                  <span class="cs-skill-title proficient">Frontend</span>
+                  <span class="cs-skill">+6</span>
+                </li>
+                <li>
+                  <span class="cs-skill-title proficient">Insight</span>
+                  <span class="cs-skill">+4</span>
+                </li>
+                <li>
+                  <span class="cs-skill-title">Intimidation</span>
+                  <span class="cs-skill">-1</span>
+                </li>
+                <li>
+                  <span class="cs-skill-title">Investigation</span>
+                  <span class="cs-skill">+5</span>
+                </li>
+                <li>
+                  <span class="cs-skill-title proficient">Perception</span>
+                  <span class="cs-skill">+7</span>
+                </li>
+                <li>
+                  <span class="cs-skill-title">Performance</span>
+                  <span class="cs-skill">+3</span>
+                </li>
+                <li> 
+                  <span class="cs-skill-title proficient">Refactoring</span>
+                  <span class="cs-skill">+6</span>
+                </li>
+              </ul>
+            </div>
+            <div class="cs-proficiencies-container">
+              <div class="row cs-extras-container">
+                <div class="cs-attribute-cell armor-class">
+                  <h6>armor class</h6>
+                  <h2>12</h2>
+                </div>
+                <div class="cs-attribute-cell">
+                  <h6>initiative</h6>
+                  <h2>+1</h2>
+                </div>
+                <div class="cs-attribute-cell">
+                  <h6>speed</h6>
+                  <h2>30</h2>
+                </div>
+                <div class="cs-attribute-cell">
+                  <h6>health</h6>
+                  <h2>88</h2>
+                </div>
+              </div>
+              <div class="cs-proficiencies">
+                <h6>proficiencies</h6>
+                <p>Light Armor, Land Vehicles, Simple Weapons</p>
+                <p>English, Korean, Memes</p>
+                <p>ES6, Ruby, Elixir, SQL, SCSS, Redis</p>
+                <p>OSX, Windows</p>
+                <p>Adobe Creative Tools</p>
+                <p>Playing Cards, Dice Sets</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- <div class="row">
           <div class="col-1-2">
             <div class="row">
               <div class="photo"></div>
@@ -108,7 +262,7 @@
             <h2>bio</h2>
             <p>My name is Barry Allen, and I'm the fastest man alive. Wait, sorry, that's The Flash. My name is Sean, and I'm a full stack software engineer based in the Bay Area. Before that, I was a designer, model, actor, and teacher based (mostly) in Seoul, South Korea.  When I'm not revolutionizing the tech industry, I'm usually found playing games or streaming as a Twitch Affiliate. My other interests include listening to and writing Korean hip hop, dancing, and playing board games with far too many pieces. I am vengeance. I am the night. Wait, sorry again, that&#8217;s Batman.</p>
           </div>
-        </div>
+        </div> -->
       </section>
 
       <section id="contact0" class="section" data-anchor="contact">

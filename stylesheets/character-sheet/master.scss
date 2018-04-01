@@ -1,0 +1,237 @@
+%cs-cell {
+  background-color: white;
+  border-radius: 4px;
+  // box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  padding: 16px;
+  margin: 8px;
+  box-sizing: border-box;
+  position: relative;
+  box-shadow: $cell-shadow;
+  h6 { 
+    margin-bottom: 0;
+  }
+}
+
+// break point 990px
+
+.cs-profile-container,
+.cs-attribute-cell,
+.cs-proficiencies,
+.cs-skills-container {
+  @extend %cs-cell;
+}
+
+.cs-attribute-cell {
+  height: 96px;
+  width: 96px;
+  text-align: center;
+  line-height: 16px;
+
+  h2 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+  }
+}
+
+.cs-background {
+  filter: grayscale(100%) blur(4px);
+}
+
+.cs-container > .row {
+  justify-content: space-between;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.cs-logo {
+  height: 208px;
+  width: 208px;
+  text-align: center;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+  margin: 8px;
+}
+
+.cs-logo-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+
+.cs-deadlines,
+.cs-developers {
+  color: white;
+  line-height: 40px;
+  z-index: 2;
+  display: block;
+}
+
+.cs-and {
+  color: $main-purple;
+  font-size: 100px;
+  line-height: 32px;
+  z-index: 0;
+  display: block;
+  text-shadow: $purple-shadow;
+}
+
+.cs-developers {
+  font-size: 36px;
+}
+
+section div.cs-profile-container {
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.cs-portrait {
+  width: 140px;
+  height: 140px;
+  border-radius: 4px;
+  background-image: url(../docs/me.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.cs-background-info-container {
+  h6 {
+    color: $main-purple;
+    margin-bottom: 0;
+  }
+  span {
+    display: block;
+    margin-bottom: 8px;
+    line-height: 16px;
+  }
+}
+
+.cs-background-info {
+  color: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  position: relative;
+  &::after {
+    @extend %cs-cell;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 400px;
+    opacity: 0;
+    top: 4px;
+    left: 0;
+    height: 0;
+    z-index: -1;
+    overflow: hidden;
+    transition: opacity 0.3s, height 0.3s;
+  }
+  
+  &:hover {
+    &::after {
+      content: attr(data-background);
+      position: absolute;
+      color: black;
+      z-index: 10;
+      width: 400px;
+      height: 180px;
+      opacity: 1;
+    }
+  }
+}
+
+.cs-class-list {
+  h6 {
+    color: $main-purple;
+  }
+}
+
+.cs-skills-container {
+  width: 200px;
+  // margin-left: 0;
+}
+
+.cs-skill-title {
+  line-height: 32px;
+  position: relative;
+  margin-left: 16px;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    box-shadow: 0 0 0 1px white,
+                0 0 0 2px rgba(0,0,0,0.1);
+    outline-offset: 1px;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: rgba(0,0,0,0.1);
+    height: 1px;
+    width: 168px;
+    bottom: -2px;
+  }
+}
+
+.cs-skill-title.proficient {
+  &::before {
+    background-color: $main-purple;
+  }
+}
+
+.cs-skill {
+  position: absolute;
+  right: 16px;
+  line-height: 32px;
+}
+
+.cs-extras-container {
+  .cs-attribute-cell {
+    margin: 8px;
+  }
+}
+
+.armor-class {
+  padding-top: 8px;
+}
+
+.cs-proficiencies {
+  // width: 100%;
+  margin: 8px;
+  p {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 990px) {
+  .cs-attribute-cell {
+    height: 80px;
+    width: 80px;
+
+    h2 {
+      font-size: 32px;
+    }    
+  }
+}
